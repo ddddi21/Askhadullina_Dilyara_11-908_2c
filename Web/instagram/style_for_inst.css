@@ -28,7 +28,7 @@ a{
     color: rgba(32, 0, 33, 0.4);
 }
 .people_in_rec{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
     margin-top: 76px;
     font-size: 13px;
@@ -40,14 +40,14 @@ a{
     margin-top: 95px;
 }
 .about_people_in_rec{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
-    margin-top: 98px;
+    margin-top: 95px;
     font-size: 11px;
     color: rgba(32, 0, 33, 0.4);
 }
 .people_in_rec_2{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
     margin-top: 130px;
     font-size: 13px;
@@ -59,9 +59,9 @@ a{
     margin-top: 140px;
 }
 .about_people_in_rec_2{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
-    margin-top: 153px;
+    margin-top: 151px;
     font-size: 11px;
     color: rgba(32, 0, 33, 0.4);
 }
@@ -74,7 +74,7 @@ a{
     margin-left: 210px;
 }
 .people_in_rec_3{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
     margin-top: 200px;
     font-size: 13px;
@@ -86,9 +86,9 @@ a{
     margin-top: 210px;
 }
 .about_people_in_rec_3{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
-    margin-top: 223px;
+    margin-top: 221px;
     font-size: 11px;
     color: rgba(32, 0, 33, 0.4);
 }
@@ -101,7 +101,7 @@ a{
     margin-left: 210px;
 }
 .people_in_rec_4{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
     margin-top: 260px;
     font-size: 13px;
@@ -113,9 +113,9 @@ a{
     margin-top: 270px;
 }
 .about_people_in_rec_4{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
-    margin-top: 283px;
+    margin-top: 281px;
     font-size: 11px;
     color: rgba(32, 0, 33, 0.4);
 }
@@ -128,7 +128,7 @@ a{
     margin-left: 210px;
 }
 .people_in_rec_5{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
     margin-top: 320px;
     font-size: 13px;
@@ -140,9 +140,9 @@ a{
     margin-top: 330px;
 }
 .about_people_in_rec_5{
-    margin-left: 55px;
+    margin-left: 50px;
     position: fixed;
-    margin-top: 343px;
+    margin-top: 341px;
     font-size: 11px;
     color: rgba(32, 0, 33, 0.4);
 }
