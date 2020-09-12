@@ -221,6 +221,7 @@ margin: 0;
     /*position: fixed;*/
 }
 .direct_img{
+    margin-top: 10px;
     margin-left: 1px;
     /*position: fixed;*/
 }
@@ -231,7 +232,7 @@ margin: 0;
 }
 .main_background{
     width: 100%;
-    height: 1500px;
+    height: 1300px;
     background-color: #f6f6f6;
     border: solid 1px rgba(219,219,219,1);
 }
@@ -244,7 +245,7 @@ margin: 0;
 .posts_field{
     background-color: white;
     width: 606px;
-    height: 900px;
+    height: 780px;
     border: solid 1px rgba(219,219,219,1);
     margin-left: 160px;
     margin-top: 10px;
@@ -265,8 +266,51 @@ margin: 0;
     font-size: 12px;
     float: top;
     margin-left: 70px;
+    /*position: relative;*/
+    top:-50px
 
 
+}
+.post_who_likes{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 8px;
+
+}
+.look_more_coment{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    color: rgba(32, 0, 33, 0.4);
+    line-height: 8px;
+}
+.comments{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 8px;
+}
+.time_ago{
+    margin-left: 10px;
+    margin-top: 5px;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif;
+    font-size: 12px;
+    color: rgba(32, 0, 33, 0.4);
+    line-height: 8px;
+}
+.saved_class{
+    float: right;
+    vertical-align: top;
+}
+.like_comment{
+
+}
+.ui_post{
+    margin-left: 10px;
 }
 .histories{
     background-color: white;
