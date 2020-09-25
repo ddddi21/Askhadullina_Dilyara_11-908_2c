@@ -1,0 +1,5 @@
+1;Bob;Clark;20;Paris;
+2;John;Snow;18;Winterfell;
+3;Sam;Smith;40;London;
+4;Vasya;Pupkin;10;Saratov;
+5;Semen;Vladimirovich;20;Kazan;

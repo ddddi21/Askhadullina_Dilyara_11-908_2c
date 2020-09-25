@@ -1,0 +1,5 @@
+1;"I'm tired";"Why people don't see?";13:45;"I just wanna some peace. Do I ask too much?"
+2;"My bro tired";"Why my bro tired?";14:04;"He need some rest. He don't ask too much"
+3;"Where's my money?";"Where?";10:37;"Just give me back my money, Vasya"
+4;"I need money";"Where I can found them?";11:00;"Let me know pls if you know"
+5;"Holidays";"I'm gonna to see my bro";16:09;"I finally will see the wall!!!"
