@@ -1,7 +1,6 @@
 package servlets;
 
 import services.Helper;
-import services.LoginService;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -12,37 +11,28 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
-@WebServlet("/login")
-public class LoginServlet extends HttpServlet {
-    private Helper helper;
-    private LoginService loginService;
+@WebServlet("/cat")
+public class CatServlet extends HttpServlet {
+    Helper helper;
     @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        helper.render(req, resp, "login.ftl",new HashMap<>());
+        helper.render(req,resp,"cat.ftl", new HashMap<>());
     }
 
     @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String username = req.getParameter("username");
-        String password = req.getParameter("password");
-        String email = req.getParameter("email");
-        boolean result = loginService.login(email, password);
+        String name = req.getParameter("name");
+        String cat = req.getParameter("cat");
         resp.setContentType("text/html");
         resp.setCharacterEncoding("UTF-8");
         Map<String, Object> root = new HashMap<>();
-        if(result){
-            root.put("name", username);
-            root.put("email", email);
-            helper.render(req, resp, "profile.ftl", root);
-        }else{
-            root.put("message","incorrect password or email");
-            helper.render(req, resp, "login.ftl", root);
+        root.put("name", name);
+        root.put("cat", cat);
+        helper.render(req, resp, "cat-2.ftl", root);
         }
-    }
 
     @Override
     public void init() throws ServletException {
         helper = new Helper();
-        loginService = new LoginService();
     }
 }

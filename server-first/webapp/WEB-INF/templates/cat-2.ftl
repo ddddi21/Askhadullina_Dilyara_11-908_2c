@@ -2,10 +2,11 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>${name}!</title>
+    <title>Cat!</title>
 </head>
 <body>
-<h2>Hello ${name}! Your email is ${email}</h2>
+<h2>Hello ${name}!</h2>
+<p>You like ${cat} :3. It's cute!</p>
 
 </body>
 </html>

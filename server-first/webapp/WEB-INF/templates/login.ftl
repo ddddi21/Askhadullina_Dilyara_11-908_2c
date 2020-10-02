@@ -2,7 +2,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<#--    <meta charset="UTF-8">-->
     <title>login</title>
 </head>
 <body>
@@ -10,10 +10,11 @@
     <p>${message}</p>
 </#if>
 <form method="post" action="/login">
-    <label>login input</label>
-    <input type="text" name="username" placeholder="введите логин"/>
-    <input type="password" name="password" placeholder="введите пароль"/>
-    <input type="submit">Подтвердить</input>
+    <label>Welcome</label> <br>
+    <input type="text" name="username" placeholder="enter login"/>
+    <input type="password" name="password" placeholder="enter password"/>
+    <input type="email" name="email" placeholder="enter email"/>
+    <input type="submit">
 </form>
 
 </body>

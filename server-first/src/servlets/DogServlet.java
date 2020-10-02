@@ -11,27 +11,23 @@ import java.io.IOException;
 import java.util.HashMap;
 import java.util.Map;
 
+@WebServlet("/dog")
+public class DogServlet extends HttpServlet {
+    @Override
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
+        String dog = req.getParameter("dog");
+        String name = req.getParameter("name");
+        resp.setContentType("text/html");
+        Map<String, Object> objectMap = new HashMap<>();
+        objectMap.put("name", name);
+        objectMap.put("dog", dog);
+        helper.render(req, resp, "dog.ftl", objectMap);
+    }
 
-@WebServlet("/hello")
-public class HelloServlet extends HttpServlet {
+
     @Override
     public void init() throws ServletException {
         helper = new Helper();
     }
-
-    private Helper helper;
-
-    @Override
-    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
-        String name = req.getParameter("name");
-        String email = req.getParameter("email");
-
-        resp.setContentType("text/html");
-
-
-        Map<String, Object> objectMap = new HashMap<>();
-        objectMap.put("name", name);
-        objectMap.put("email", email);
-        helper.render(req, resp, "hello.ftl", objectMap);
-    }
+    Helper helper;
 }
