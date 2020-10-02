@@ -2,6 +2,8 @@ package HW_3;
 
 import java.io.*;
 
+//TODO(обработать нормально исключения)
+
 public class Server {
     public static void main(String[] args) throws IOException {
         Server server = new Server();
@@ -43,14 +45,22 @@ public class Server {
         }
         if(!isfound){
             System.out.println("User not found. Would you want to add him?");
-//            String answer = new BufferedReader(new InputStreamReader(System.in)).readLine().toLowerCase();
-//            if (answer.equals("yes")){
-//                PrintWriter write_new_people = new PrintWriter(file);
-//                write_new_people.println();
-//                System.out.println("Enter his Name,Surname,Age, Place From from ; in right order");
-//            }
-            //доделать
-
+            String answer = new BufferedReader(new InputStreamReader(System.in)).readLine().toLowerCase();
+            if (answer.equals("yes")){
+                File file_write_in = new File("src/users.txt");
+                PrintWriter write_in_users = new PrintWriter(file_write_in);
+//                write_in_users.append(reader.lines(),uniq_id()+";")
+                write_in_users.write(uniq_id()+";");
+                System.out.println("Enter his Name,Surname,Age, Place From from ; in right order");
+                BufferedReader reader1= new BufferedReader(new InputStreamReader(System.in));
+                    String[] read_user_fiields = reader1.readLine().split(";");
+                    if (read_user_fiields.length != 4) {
+                        System.out.println("Incorrect format");
+                    } else {
+                        write_in_users.write(read_user_fiields[0] + ";" + read_user_fiields[1] + ";" + read_user_fiields[2] + ";" + read_user_fiields[3]);
+                        System.out.println("User add");
+                    }
+            }
         }
         reader.close();
         writer.close();
@@ -119,5 +129,19 @@ public class Server {
         System.out.println("Incorrect request");
         writer.println("404. File not found");
         writer.close();
+    }
+    
+    public static String uniq_id() throws IOException {
+        BufferedReader reader = new BufferedReader(new FileReader("src/users.txt"));
+        String s = reader.readLine();
+//        String[] user = new String[0];
+        int count = 0;
+        while (s != null){
+//            user = s.split(";");
+            s = reader.readLine();
+            count++;
+        }
+        String id = String.valueOf(count +1);
+     return  id;
     }
 }
