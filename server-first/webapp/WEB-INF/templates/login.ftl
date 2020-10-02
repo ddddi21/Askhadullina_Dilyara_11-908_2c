@@ -11,7 +11,7 @@
 </#if>
 <form method="post" action="/login">
     <label>Welcome</label> <br>
-    <input type="text" name="username" placeholder="enter login"/>
+    <input type="text" name="username" placeholder="enter name"/>
     <input type="password" name="password" placeholder="enter password"/>
     <input type="email" name="email" placeholder="enter email"/>
     <input type="submit">
