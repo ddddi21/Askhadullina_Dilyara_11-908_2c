@@ -47,7 +47,7 @@ public class Client extends JFrame implements ActionListener, ConnectionListener
         setVisible(true);
 
         try {
-            connection = new Connection(this, ip, port);
+            connection = new Connection(this, "localhost", port);
         } catch (IOException e) {
             printMessage("Connection exception: " + e);
         }
