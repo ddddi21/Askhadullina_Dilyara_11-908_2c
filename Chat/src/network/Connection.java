@@ -1,12 +1,17 @@
 package network;
 
+import room.Room;
+
 import java.io.*;
 import java.net.Socket;
 import java.nio.charset.Charset;
 import java.nio.charset.StandardCharsets;
+import java.util.ArrayList;
+import java.util.List;
 
 public class Connection {
     ConnectionListener connectionListener;
+    private final List<Room> rooms = new ArrayList<>();
     private Socket socket;
     private Thread thread;
     private BufferedReader in;
@@ -58,7 +63,25 @@ public class Connection {
             connectionListener.onException(Connection.this, e);
         }
     }
+    public Room createRoom(int number){
+        Room room = new Room(number);
+        rooms.add(room);
+        return room;
+    }
 
+    public Room connectToRoom(int number){
+        for(Room room:rooms){
+            if(room.number == number) return room;
+        }
+        return null;
+    }
+    public boolean roomIsCreat(int number){
+        boolean isCreate = false;
+        for(Room room:rooms){
+            if(room.number == number)isCreate = true;
+        }
+        return isCreate;
+    }
     @Override
     public String toString(){
         return "Connection" + socket.getInetAddress() + ": " + socket.getPort();
